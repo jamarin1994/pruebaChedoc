@@ -30,7 +30,6 @@ const Cards = (datosJson) => {
             </SkeletonTheme>
         </div>
         :
-
       dataMostrar.map((value, index) => (
       <Link style={{textDecoration:"red", color:"white"}} key={index}>
       {(value.programType === cambiarFiltroPelicula && value.releaseYear >=2010) ?
@@ -49,7 +48,7 @@ const Cards = (datosJson) => {
         : null}
     </Link>
       ))
-      };
+      }
     </>
     ) 
 }
