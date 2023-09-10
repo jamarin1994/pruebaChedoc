@@ -5,13 +5,10 @@ import { useParams } from "react-router-dom"
 import "./series.css"
 
 const Series = () => {
-    console.log("IGUALLLpeliii",datosJson.entries);
-    console.log("imagen",datosJson.entries[0].images["Poster Art"].url);
   let datosJsonMostrar=datosJson;
 
   let rutaActual= window.location.href.split("/");
   let page = rutaActual[rutaActual.length -1];
-  console.log("ruta ",page);
 
 
   const [movieList, setMovieList] = useState([])
@@ -19,7 +16,6 @@ const Series = () => {
 
    useEffect(() => {
     let url = datosJson;
-    console.log("URL",url);
     fetch(url)
         .then(res => res.json())
         .then(movieList => setMovieList(movieList))
